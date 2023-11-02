@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('writer_id');
             $table->string('w_fname');
             $table->string('w_lname');
-            $table->Integer('phone');
+            $table->string('phone');
             $table->string('address');
             $table-> Integer('postcode');
 
