@@ -13,4 +13,8 @@ class order extends Model
     {
         return $this->belongsTo(writer::class,'writer_id');
     }
+    public function Book()
+    {
+        return $this->hasMany(Book::class,'book_id');
+    }
 }
