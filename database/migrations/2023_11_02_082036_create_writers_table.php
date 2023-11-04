@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('writers', function (Blueprint $table) {
             $table->id('writer_id');
-            $table->string('w_fname');
-            $table->string('w_lname');
-            $table->string('phone');
-            $table->string('address');
-            $table-> Integer('postcode');
+            $table->string('w_firstname');
+            $table->string('w_lastname');
+            $table->string('w_phone');
+            $table->string('w_address');
+            $table->String('w_postcode');
 
             $table->timestamps();
         });
