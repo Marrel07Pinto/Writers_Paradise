@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id('book_id');
+            $table->biginteger('order_id')->unsigned();
             $table->string('b_name');
             $table->string('b_description');
             $table->string('b_genre');
             $table->Integer('b_price');
             $table->Integer('b_no_of_copies');
             $table->timestamps();
+
+            $table->foreign('order_id')->references('order_id')->on('orders')
+            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
