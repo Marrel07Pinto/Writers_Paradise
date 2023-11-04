@@ -20,5 +20,7 @@ class writerTableSeeder extends Seeder
         $w->w_address="Brigade metrapolis";
         $w->w_postcode="Sa 7pp";
         $w->save();
+
+        writer::factory()->count(20)->create();
     }
 }

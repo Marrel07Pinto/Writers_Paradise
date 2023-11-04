@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
 
-class bookTableSeeder extends Seeder
+class BookTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,5 +20,7 @@ class bookTableSeeder extends Seeder
        $b ->b_price="30";
        $b ->b_no_of_copies="2";
        $b->save();
+
+      Book::factory()->count(20)->create();
     }
 }

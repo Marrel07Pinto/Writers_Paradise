@@ -19,5 +19,7 @@ class orderTableSeeder extends Seeder
        $o->book_id = "1";
        $o->save();
 
+       order::factory()->count(20)->create();
+
     }
 }
