@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    protected $primaryKey ='book_id';
-    use HasFactory;
     
+    use HasFactory;
+    protected $primaryKey ='book_id';
     public function order()
     {
-        return $this->belongsTo(Order::class,'order_id');
+        return $this->belongsTo(Order::class,'book_id');
     }
    
 }
