@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\wrbook>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Book>
  */
 class BookFactory extends Factory
 {
@@ -17,12 +17,12 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'b_name'=> fake()->unique()->sentence(),
-            'b_description'=> fake()->sentence(),
-            'b_genre'=> fake()->word(),
-            'b_price'=> fake()->randomFloat(2,10,50),
-            'b_no_of_copies'=> fake()->numberBetween(1,20),
+            'order_id'=>fake()->numberBetween(1,4),
+            'b_name'=>fake()->name(),
+            'b_description'=>fake()->sentence(),
+            'b_genre'=>fake()->word(),
+            'b_price'=>fake()->randomFloat(2,0,100),
+            'b_no_of_copies'=>fake()->numberBetween(1,5),
         ];
     }
 }
-
