@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Writer;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Writer>
@@ -14,14 +15,16 @@ class WriterFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Writer::class;
     public function definition(): array
     {
         return [
-            'w_firstname' => fake()-> name(),
-            'w_lastname' => fake()-> name(),
-            'w_phone' => fake() ->phoneNumber(),
-            'w_address' =>fake() ->address(),
-            'w_postcode' =>fake() ->postcode(),
+            'w_firstname' => $this->faker-> name(),
+            'w_lastname' => $this->faker-> name(),
+            'w_phone' => $this->faker->phoneNumber(),
+            'w_address' =>$this->faker ->address(),
+            'w_postcode' =>$this->faker->postcode(),
+
         ];
     }
 }
