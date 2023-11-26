@@ -13,4 +13,8 @@ class Writer extends Model
     {
         return $this->hasOne(Order::class,'writer_id');
     }
+    public function Books()
+    {
+        return $this->belongsToMany(Book::class,'book_id');
+    }
 }
