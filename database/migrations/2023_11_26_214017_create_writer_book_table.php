@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('writer_book',function(Blueprint $table){
             $table->primary(['writer_id','book_id']);
-            $table->unsignedBigInteger('writer_id');
-            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('writer_id')->unsigned();
+            $table->unsignedBigInteger('book_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('writer_id')->references('writer_id')->on('writers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('writer_id')->references('writer_id')->on('writers')
+            ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('book_id')->references('book_id')->on('books')
             ->onDelete('cascade')->onUpdate('cascade');
 
