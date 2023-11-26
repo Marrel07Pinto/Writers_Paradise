@@ -16,6 +16,6 @@ class OrderTableSeeder extends Seeder
         $o = new Order;
         $o -> writer_id ='1';
         $o->save();
-        Order::factory()->count(10)->create();
+      //  Order::factory()->count(10)->create();
     }
 }
