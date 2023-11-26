@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 Use App\Models\Book;
+Use App\Models\Writer;
 
 class BookTableSeeder extends Seeder
 {
