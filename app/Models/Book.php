@@ -9,14 +9,14 @@ class Book extends Model
 {
     
     use HasFactory;
-    protected $primaryKey ='book_id';
+  //  protected $primaryKey ='book_id';
     public function order()
     {
-        return $this->belongsTo(Order::class,'book_id');
+        return $this->belongsTo(Order::class);
     }
     public function writers()
     {
-        return $this->belongsToMany(Writer::class,'writer_id');
+        return $this->belongsToMany(Writer::class);
     }
    
 }

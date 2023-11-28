@@ -15,6 +15,7 @@ class BookTableSeeder extends Seeder
     public function run(): void
     {
         $b = new Book;
+        $b->id = '1';
         $b->order_id = '1';
         $b->b_name = 'power of mind';
         $b->b_description = 'A book is';
@@ -22,7 +23,7 @@ class BookTableSeeder extends Seeder
         $b->b_price = '20';
         $b->b_no_of_copies = '3';
         $b->save();
-        $b->writers()->attach(1);
-        Book::factory()->count(10)->create();
+        
+       Book::factory()->count(10)->create();
     }
 }

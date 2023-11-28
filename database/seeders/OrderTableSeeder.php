@@ -14,8 +14,9 @@ class OrderTableSeeder extends Seeder
     public function run(): void
     {
         $o = new Order;
-        $o -> writer_id ='1';
+       $o ->id ='1';
+       $o->writer_id='1';
         $o->save();
-      //  Order::factory()->count(10)->create();
+        Order::factory()->count(10)->create();
     }
 }

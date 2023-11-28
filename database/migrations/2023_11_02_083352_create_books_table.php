@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id('book_id');
+            $table->id();
             $table->biginteger('order_id')->unsigned();
             $table->string('b_name');
             $table->string('b_description');
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->Integer('b_no_of_copies');
             $table->timestamps();
 
-            $table->foreign('order_id')->references('order_id')->on('orders')
+            $table->foreign('order_id')->references('id')->on('orders')
             ->onDelete('cascade')->onUpdate('cascade');
         });
     }
