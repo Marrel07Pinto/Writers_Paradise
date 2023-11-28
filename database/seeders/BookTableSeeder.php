@@ -22,6 +22,7 @@ class BookTableSeeder extends Seeder
         $b->b_price = '20';
         $b->b_no_of_copies = '3';
         $b->save();
+        $b->writers()->attach(1);
         Book::factory()->count(10)->create();
     }
 }
