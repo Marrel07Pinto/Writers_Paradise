@@ -21,7 +21,6 @@ class WriterTableSeeder extends Seeder
         $w->w_address ='Brigade0123';
         $w->w_postcode ='SA1 1QA';
         $w->save();
-       // $w->books()->attach(1);
         Writer::factory()->count(10)->create();
     }
 }

@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 Use App\Models\Book;
 Use App\Models\Order;
+Use App\Models\Writer;
 
 
 /**
@@ -30,10 +31,24 @@ class BookFactory extends Factory
 
         ];
     }
+    public function configure()
+    {
+        
+        return $this->afterCreating(function (Book $book) {
+            // Attach a writer to the book
+            $writers = Writer::factory(2)->create();
+            foreach ($writers as $writer){
+            $book->writers()->attach($writer->id);
+            }
+        });
+    }
     public function Book()
     {
         return $this->BelongsTo(Order::class,'order_id');
         
     }
+    
+    
 
 }
+

@@ -19,11 +19,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call(WriterTableSeeder::class);
-       // $this->call(OrderTableSeeder::class);
-       // $this->call(BookTableSeeder::class);
-        \App\Models\Order::factory(3)
-       ->has(\App\Models\Book::factory()->count(3))
-        ->create();
+    //    $this->call(OrderTableSeeder::class);
+    //    $this->call(BookTableSeeder::class);
+          \App\Models\Order::factory(3)
+         ->has(\App\Models\Book::factory()->count(3))
+         ->create();
 
     }
 }

@@ -23,13 +23,13 @@ class OrderFactory extends Factory
             'writer_id'=>Writer::factory(),
         ];
     }
-    public function book()
-    {
-        return $this->afterCreating(function(Order $order)
-        {
+    // public function book()
+    // {
+    //     return $this->afterCreating(function(Order $order)
+    //     {
             
-        });
+    //     });
 
     
-    }
+    // }
 }
