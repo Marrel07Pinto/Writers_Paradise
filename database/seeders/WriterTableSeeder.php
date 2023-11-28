@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Writer;
+use App\Models\Book;
 
 class WriterTableSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class WriterTableSeeder extends Seeder
         $w->w_address ='Brigade0123';
         $w->w_postcode ='SA1 1QA';
         $w->save();
-
-     //   Writer::factory()->count(10)->create();
+       // $w->books()->attach(1);
+        Writer::factory()->count(10)->create();
     }
 }
