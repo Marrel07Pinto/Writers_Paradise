@@ -15,6 +15,7 @@ class WriterTableSeeder extends Seeder
     public function run(): void
     {
         $w = new Writer;
+        $w->user_id='1';
         $w->w_firstname = 'Keith';
         $w->w_lastname = 'Pinto';
         $w->w_phone = '9987656345';
