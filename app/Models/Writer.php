@@ -17,4 +17,8 @@ class Writer extends Model
     {
         return $this->belongsToMany(Book::class);
     }
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
