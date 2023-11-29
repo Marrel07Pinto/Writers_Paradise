@@ -138,32 +138,17 @@
         </div>
 
         <div class="row">
-
-          <!-- <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-              </div>
-            </div>
-          </div> -->
-          <?php
-        // Loop through the database results
-        while ($row = $result->fetch_assoc()) {
-            ?>
-            <div class="col-lg-4 col-md-6">
-                <div class="member">
-                    <div class="pic"><img src="assets/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4><?php echo $row['chef_name']; ?></h4>
-                        <span><?php echo $row['chef_role']; ?></span>
-                    </div>
-                </div>
-            </div>
-        <?php
-        }
-        ?>
+@foreach ($books as $book)
+<div class="col-lg-4 col-md-6">
+    <div class="member">
+        <div class="pic"><img src="{{ asset('assets/assets/img/chefs/chefs-1.jpg') }}" class="img-fluid" alt=""></div>
+        <div class="member-info">
+            <h4>{{ $book->b_name }}</h4>
+            <span>{{ $book->b_description}}</span>
+        </div>
+    </div>
+</div>
+@endforeach
 
           <div class="col-lg-4 col-md-6">
             <div class="member">
@@ -174,18 +159,9 @@
               </div>
             </div>
           </div>
+          
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
+          
 
       </div>
     </section><!-- End Chefs Section -->
