@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/Ebooks', function () {
-    return view('Ebooks');
+    $books = DB::table('books')->get();
+    return view('Ebooks', ['books' => $books]);
+    
 });
 
 Route::get('/dashboard', function () {
