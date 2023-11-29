@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('writers', function (Blueprint $table) {
             $table->id();
+            $table->biginteger('user_id')->unsigned();
             $table->string('w_firstname')->nullable();
             $table->string('w_lastname');
             $table->string('w_phone')->nullable();
@@ -20,6 +21,8 @@ return new class extends Migration
             $table->string('w_postcode');
 
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -19,6 +19,7 @@ class WriterFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id'=>User::factory(),
             'w_firstname' => $this->faker-> name(),
             'w_lastname' => $this->faker-> name(),
             'w_phone' => $this->faker->phoneNumber(),
