@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EbooksController;
 
 
 /*
@@ -21,11 +22,7 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('Home');
 });
-Route::get('/Ebooks', function () {
-    $books = DB::table('books')->get();
-    return view('Ebooks', ['books' => $books]);
-    
-});
+Route::get('/Ebooks', [EbooksController::class,'index']);
 Route::get('/Chat', function () {
     return view('Chat');
 });
