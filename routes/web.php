@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('Home');
 });
-Route::get('/Ebooks', [EbooksController::class,'index']);
+Route::get('/Ebooks', [EbooksController::class, 'index']);
 Route::get('/Chat', function () {
     return view('Chat');
 });
