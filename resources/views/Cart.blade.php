@@ -39,12 +39,10 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
-    </div>
-  </section>
+ 
 
   <!-- ======= Header ======= -->
+  <section id="dashboardbackground">
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
@@ -54,10 +52,11 @@
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="Home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#chefs">E-Books</a></li>
+          <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
           <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
           <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
@@ -68,80 +67,89 @@
       <a href="#book-a-table" class="book-a-table-btn scrollto">Profile</a>
 
     </div>
-  </header><!-- End Header -->
+  </header>
+</section><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+ 
 
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+         
 
-        <div class="carousel-inner" role="listbox">
+         
 
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(assets/assets/img/slide/slide-1.jpg);">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>EBook</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              </div>
+         
+
+       
+
+      
+  </section><!-- End Hero -->
+
+ <!-- ======= Menu Section ======= -->
+ <section id="menu" class="menu">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Your <span>Orders</span></h2>
+        </div>
+
+        
+
+        <div class="row menu-container">
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#">Lobster Bisque</a><span>$5.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
             </div>
           </div>
 
-          <!-- Slide 2 -->
+          <div class="col-lg-6 menu-item filter-specialty">
+            <div class="menu-content">
+              <a href="#">Bread barrel</a><span>$6.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
 
-          <!-- Slide 3 -->
+          <div class="col-lg-6 menu-item filter-starters">
+            <div class="menu-content">
+              <a href="#">Crab Cake</a><span>$7.95</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <div class="menu-content">
+              <a href="#">Caesar Selections</a><span>$8.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          
+
+         
          
 
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero -->
+          
 
-  <main id="main">
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
 
 
    
 
-    <!-- ======= Chefs Section ======= -->
-    <section id="chefs" class="chefs">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>E-Books</h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
-
-        <div class="row">
-@foreach ($books as $book)
-<div class="col-lg-4 col-md-6">
-    <div class="member">
-        <div class="pic"><img src="{{ asset('assets/assets/img/chefs/chefs-1.jpg') }}" class="img-fluid" alt=""></div>
-        <div class="member-info">
-            <h4>{{ $book->b_name }}</h4>
-            <span>{{ $book->b_description}}</span>
-        </div>
-    </div>
-</div>
-@endforeach
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-              </div>
-            </div>
-          </div>
-          
-
-          
-
-      </div>
-    </section><!-- End Chefs Section -->
-
+   
   
            
   </main><!-- End #main -->
