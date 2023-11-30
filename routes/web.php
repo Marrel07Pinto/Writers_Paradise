@@ -29,6 +29,9 @@ Route::get('/Ebooks', function () {
 Route::get('/Chat', function () {
     return view('Chat');
 });
+Route::get('/Cart', function () {
+    return view('Cart');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
