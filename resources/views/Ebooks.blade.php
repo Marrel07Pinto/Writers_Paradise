@@ -58,14 +58,14 @@
         <ul>
           <li><a class="nav-link scrollto active" href="Home">Home</a></li>
           <li><a class="nav-link scrollto" href="#chefs">E-Books</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Chat</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Profile</a></li>
+          <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Cart</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a>
+      <a href="#book-a-table" class="book-a-table-btn scrollto">Profile</a>
 
     </div>
   </header><!-- End Header -->
