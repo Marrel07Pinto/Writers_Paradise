@@ -70,15 +70,6 @@
   </header>
 </section><!-- End Header -->
 
- 
-
-         
-
-         
-
-         
-
-       
 
       
   </section><!-- End Hero -->
