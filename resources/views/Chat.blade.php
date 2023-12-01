@@ -108,23 +108,11 @@
           </div>
          </div>
 </section>
-
-
-        
-
-      </div>
-  </section><!-- End Gallery Section -->
-
-
-         
-
-         
-
-         
-
-       
-
-      
+<section id="contact" class="contact">
+<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+     <div class="text-center"><button type="submit">Post</button></div>
+</form>
+</section>
  
 
 
