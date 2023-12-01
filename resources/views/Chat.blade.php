@@ -39,12 +39,10 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
-    </div>
-  </section>
+ 
 
   <!-- ======= Header ======= -->
+  <section id="dashboardbackground">
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
@@ -53,6 +51,7 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
+
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -68,36 +67,79 @@
       <a href="#book-a-table" class="book-a-table-btn scrollto">Profile</a>
 
     </div>
-  </header><!-- End Header -->
+  </header>
+</section><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section id="gallery" class="gallery">
+      <div class="container-fluid">
 
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+        <div class="section-title">
+          <h2>Some photos from <span>Our Restaurant</span></h2>
+        </div>
 
-        <div class="carousel-inner" role="listbox">
+       
 
-         
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
 
-         
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
 
           
+        </div>
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
+     
+    </section><!-- End Gallery Section -->
 
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
 
-      </div>
-    </div>
-  </section><!-- End Hero -->
+         
 
-  <main id="main">
+         
+
+         
+
+       
+
+      
+ 
+
+
+ 
+
 
 
    

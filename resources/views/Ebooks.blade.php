@@ -119,8 +119,10 @@
     <div class="member">
         <div class="pic"><img src="{{ asset('assets/assets/img/chefs/chefs-1.jpg') }}" class="img-fluid" alt=""></div>
         <div class="member-info">
-            <h4>{{ $book->b_name }}</h4>
-            <span>{{ $book->b_description}}</span>
+            <h4><label class="eblabels">Name: </label>{{ $book->b_name }}</h4>
+            <span><label class="eblabels">Description: </label>{{ $book->b_description}}</span>
+            <h><label class="eblabels">Genre: </label>{{ $book->b_genre }}</h><br>
+             <h><label class="eblabels">Copies: </label>{{ $book->b_no_of_copies}}</h>
         </div>
     </div>
 </div>
