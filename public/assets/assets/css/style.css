@@ -1201,13 +1201,70 @@ section {
   border-bottom: 3px solid #fff;
 }
 
+.gallery {
+  /* padding-bottom: 0; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.gallery .gallery-item {
+  
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+  width: 400px; /* Set a fixed width for the post */
+}
+
 .gallery .gallery-item img {
   transition: all ease-in-out 0.4s;
+  width: 100%;
+      height: auto;
+      display: block;
 }
 
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
 }
+.comments {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+   color: #333
+}
+
+.gallery2 {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+}
+
+/* Center the container inside the section */
+.container-fluid {
+  text-align: center;
+}
+
+.gallery-item2 {
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+  width: 400px; /* Set a fixed width for the gallery item */
+}
+.gallery-item2 img {
+  transition: all ease-in-out 0.4s;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-item2:hover img {
+  transform: scale(1.1);
+}
+
 
 /*--------------------------------------------------------------
 # Chefs

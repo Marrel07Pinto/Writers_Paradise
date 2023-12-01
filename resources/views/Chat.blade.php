@@ -75,55 +75,45 @@
 
         <div class="section-title">
           <h2>Some photos from <span>Our Restaurant</span></h2>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
-       
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-4">
             <div class="gallery-item">
               <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
                 <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                <div class="comments">
+                 <p>User123: This looks amazing!</p>
+                 <p>User456: Great ambiance!</p>
+                  <!-- Add more comments as needed -->
+                </div>
               </a>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+</section>
+<section id="gallery2" class="gallery2">
+       <div class="container-fluid2">
+         <div class="col-lg-4">
+            <div class="gallery-item2">
+              <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                <div class="comments">
+                 <p>User123: This looks amazing!</p>
+                 <p>User456: Great ambiance!</p>
+                  <!-- Add more comments as needed -->
+                </div>
               </a>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+         </div>
+</section>
 
 
-          
-        </div>
+        
 
-     
-    </section><!-- End Gallery Section -->
+      </div>
+  </section><!-- End Gallery Section -->
 
 
          
