@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EbooksController;
+use App\Http\Controllers\ChatController;
 
 
 /*
@@ -23,9 +24,16 @@ Route::get('/Home', function () {
     return view('Home');
 });
 Route::get('/Ebooks', [EbooksController::class, 'index']);
+
+Route::post('/Chat', [ChatController::class, 'store'])->name('Chat.store');
+
 Route::get('/Chat', function () {
     return view('Chat');
 });
+
+
+
+
 Route::get('/Cart', function () {
     return view('Cart');
 });
