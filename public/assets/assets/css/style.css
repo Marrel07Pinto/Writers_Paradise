@@ -1540,6 +1540,9 @@ section {
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
 }
+.contact .php-email-form {
+  margin-left: auto;
+}
 
 .contact .php-email-form .error-message {
   display: none;
@@ -1578,7 +1581,7 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact button[type=submit] {
   background: #ffb03b;
   width:200px;
   border: 0;
@@ -1586,6 +1589,7 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  margin-left: auto;
 }
 
 .contact .php-email-form button[type=submit]:hover {
