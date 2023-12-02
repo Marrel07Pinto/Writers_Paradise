@@ -70,21 +70,22 @@
   </header>
 </section><!-- End Header -->
 
-<section id="gallery" class="gallery">
-      <div class="container-fluid">
 
         <div class="section-title">
           <h2>Some photos from <span>Our Restaurant</span></h2>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
-
+ @foreach($posts as $post)
+ @if($post->id % 2 != 0)
+<section id="gallery" class="gallery">
+      <div class="container-fluid">
           <div class="col-lg-4">
             <div class="gallery-item">
-              <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
+                <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid">
                 <div class="comments">
-                <p>Caption: old is gold</p>
+                <p>Caption:{{ $post->p_Caption }}</p>
                  <p>User123: This looks amazing!</p>
                  <p>User456: Great ambiance!</p>
                   <!-- Add more comments as needed -->
@@ -93,13 +94,13 @@
             </div>
           </div>
 </section>
+@else
 <section id="gallery2" class="gallery2">
-@foreach($posts as $post)
             <div class="container-fluid2">
                 <div class="col-lg-4">
                     <div class="gallery-item2">
-                        <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                            <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid" width="">
+                        <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
+                            <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid" >
                             <div class="comments">
                                 <p>Caption:{{ $post->p_Caption }}</p>
                                 <p>User123: This looks amazing!</p>
@@ -109,9 +110,10 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            </div>       
 </section>
+@endif
+@endforeach
 <section id="contact" class="contact">
 <form method="POST" action="{{ route('Chat.store') }}" enctype="multipart/form-data" class="">        
         @csrf
