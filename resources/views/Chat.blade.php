@@ -109,7 +109,8 @@
          </div>
 </section>
 <section id="contact" class="contact">
-<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+<form action="/upload" method="post" enctype="multipart/form-data" class="php-email-form">
+<input type="file"  id="imageInput" name="image" accept="image/*">
      <div class="text-center"><button type="submit">Post</button></div>
 </form>
 </section>
