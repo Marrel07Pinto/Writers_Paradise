@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->biginteger('writer_id')->unsigned();
             $table->string('post_img');
+            $table->string('p_Caption');
             $table->integer('p_likes');
             $table->timestamps();
 

@@ -17,6 +17,7 @@ class PostTableSeeder extends Seeder
        $p ->id ='1';
        $p->writer_id='1';
        $p->post_img ='1.jpg';
+       $p->p_caption ='old is gold';
        $p->p_likes = '5';
        $p->save();
 
