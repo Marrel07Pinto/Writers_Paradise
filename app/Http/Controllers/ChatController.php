@@ -12,7 +12,8 @@ class ChatController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all(); 
+        return view('Chat', ['posts' => $posts]);
     }
 
     /**
@@ -30,7 +31,7 @@ class ChatController extends Controller
     {
         $request->validate([
             'p_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'p_Caption' => 'required',
+            
         ]);
     
         if ($request->hasFile('p_image')) 

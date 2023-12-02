@@ -94,44 +94,33 @@
           </div>
 </section>
 <section id="gallery2" class="gallery2">
-       <div class="container-fluid2">
-         <div class="col-lg-4">
-            <div class="gallery-item2">
-              <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-                <div class="comments">
-                  <p>Caption: old is gold</p>
-                 <p>User123: This looks amazing!</p>
-                 <p>User456: Great ambiance!</p>
-                  <!-- Add more comments as needed -->
+@foreach($posts as $post)
+            <div class="container-fluid2">
+                <div class="col-lg-4">
+                    <div class="gallery-item2">
+                        <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                            <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid" width="">
+                            <div class="comments">
+                                <p>Caption:{{ $post->p_Caption }}</p>
+                                <p>User123: This looks amazing!</p>
+                                <p>User456: Great ambiance!</p>
+                                <!-- Add more comments as needed -->
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </a>
             </div>
-          </div>
-         </div>
+        @endforeach
 </section>
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
-@if(Session::has('success'))
-<p class="text-success">{{session('success')}}</p>
-@endif
 <section id="contact" class="contact">
 <form method="POST" action="{{ route('Chat.store') }}" enctype="multipart/form-data" class="">        
         @csrf
         <div class="row">
             <div class="col-md-5 form-group">
-                <input type="text" name="p_Caption" class="form-control" id="caption" placeholder="Post Caption" required>
+                <input type="text" name="p_Caption" class="form-control" id="caption" placeholder="Post Caption" >
             </div>
             <div class="col-md-6 form-group">
-                <input type="file" name="p_image">
+                <input type="file" name="p_image" required>
                 <button type="submit">Post</button>
             </div>
         </div>
