@@ -22,7 +22,7 @@ class PostFactory extends Factory
         return [
             'writer_id'=>Writer::factory(),
             'post_img'=> $fileName,
-            'p_caption'=>$this->sentence(),
+            'p_caption'=>$this->faker->sentence(),
             'p_likes'=>$this->faker->randomFloat(2,0,100),
         ];
     }
