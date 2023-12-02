@@ -84,6 +84,7 @@
               <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
                 <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
                 <div class="comments">
+                <p>Caption: old is gold</p>
                  <p>User123: This looks amazing!</p>
                  <p>User456: Great ambiance!</p>
                   <!-- Add more comments as needed -->
@@ -99,6 +100,7 @@
               <a href="assets/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
                 <img src="assets/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
                 <div class="comments">
+                  <p>Caption: old is gold</p>
                  <p>User123: This looks amazing!</p>
                  <p>User456: Great ambiance!</p>
                   <!-- Add more comments as needed -->
@@ -108,11 +110,32 @@
           </div>
          </div>
 </section>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if(Session::has('success'))
+<p class="text-success">{{session('success')}}</p>
+@endif
 <section id="contact" class="contact">
-<form action="/upload" method="post" enctype="multipart/form-data" class="php-email-form">
-<input type="file"  id="imageInput" name="image" accept="image/*">
-     <div class="text-center"><button type="submit">Post</button></div>
-</form>
+<form method="POST" action="{{ route('Chat.store') }}" enctype="multipart/form-data" class="">        
+        @csrf
+        <div class="row">
+            <div class="col-md-5 form-group">
+                <input type="text" name="p_Caption" class="form-control" id="caption" placeholder="Post Caption" required>
+            </div>
+            <div class="col-md-6 form-group">
+                <input type="file" name="p_image">
+                <button type="submit">Post</button>
+            </div>
+        </div>
+    </form>
 </section>
  
 
