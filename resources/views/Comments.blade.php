@@ -79,15 +79,26 @@
           <h2>Some photos from <span>Our Restaurant</span></h2>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
-        <section class="gallery_image">
-            <h2>Gallery</h2>
+        <section class="gallery_image" >
+            <h2>Username</h2>
             <div class="grid-container">
                 <figure class="grid-item">
                     <img src="assets/assets/img/chefs/chefs-2.jpg" alt="Image 1">
                     <figcaption>Caption for Image 1</figcaption>
                 </figure>
+                
             </div>
+            <div class id="comments">
+                 <h2>Comments</h2>
+                user1 : good its best
+          </div>
+          <form class="comment-form" id="commentForm">
+      <input type="text" class="comment-input" id="commentInput" placeholder="Add a comment...">
+      <button type="button" class="comment-button" onclick="submitComment()">Submit</button>
+    </form>
+  </section>
         </section>
+        
        
   </main><!-- End #main -->
 

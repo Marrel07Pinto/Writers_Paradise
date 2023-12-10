@@ -1269,38 +1269,59 @@ section {
 -------------------------------------------------------*/
 .gallery_image {
   background-color: #fff;
-  padding: 20px;
-}
-
-.gallery_image h2 {
-  margin-top: 0;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 20px;
-}
-
-.grid-item {
-  background-color: #eee;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px; /* Adjust the padding to control the spacing */
+  margin: 20px 0; /* Adjust the margin to control the spacing */
 }
 
 .grid-item img {
-  width: 100%;
-  height: auto;
+  width: 50%; /* Make the image take 100% of its container width */
+  max-width: 500px; /* Set a maximum width for the image */
+  height: 50%;
   margin-bottom: 20px;
 }
 
-.grid-item figcaption {
-  font-size: 14px;
-  margin-bottom: 20px;
+#comments {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 
+#comments h2 {
+  margin-bottom: 10px;
+}
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center the icon and text vertically */
+}
+
+.comment-button:hover {
+  background-color: #297fb8; /* Change the color to your desired hover color */
+}
+
+.comment-button svg {
+  margin-right: 6px; /* Adjust the space between the icon and text */
+}
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
