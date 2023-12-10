@@ -27,7 +27,9 @@ Route::get('/Ebooks', [EbooksController::class, 'index']);
 
 Route::get('/Chat', [ChatController::class, 'index']);
 Route::post('/Chat', [ChatController::class, 'store'])->name('Chat.store');
-
+Route::get('/Comments', function () {
+    return view('Comments');
+});
 
 
 

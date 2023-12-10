@@ -1264,7 +1264,42 @@ section {
 .gallery-item2:hover img {
   transform: scale(1.1);
 }
+/*--------------------------------------------------------------
+#Comments
+-------------------------------------------------------*/
+.gallery_image {
+  background-color: #fff;
+  padding: 20px;
+}
 
+.gallery_image h2 {
+  margin-top: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #eee;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.grid-item figcaption {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 
 /*--------------------------------------------------------------
 # Chefs
