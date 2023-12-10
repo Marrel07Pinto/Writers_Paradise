@@ -89,10 +89,10 @@
               <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
                 <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid">
                 <div class="comments">
-                <p>Caption:{{ $post->p_Caption }}</p>
-                 <p>User123: This looks amazing!</p>
-                 <p>User456: Great ambiance!</p>
-                  <!-- Add more comments as needed -->
+                <div class="col-lg-4">
+                <a class="nav-link scrollto" href="Comments"><b>Caption:</b>{{ $post->p_Caption }}</a>
+                </div>
+                </nav>
                 </div>
               </a>
             </div>
