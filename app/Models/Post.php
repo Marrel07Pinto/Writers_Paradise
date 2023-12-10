@@ -12,4 +12,8 @@ class Post extends Model
     {
         return $this->belongsTo(Writer::class);
     }
+    public function Comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
