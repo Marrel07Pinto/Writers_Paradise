@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Writers_Paradise - E-Book</title>
+  <title>Writers_Paradise</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -59,12 +59,16 @@
           <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
           <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
           <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
+          <li><a class="nav-link scrollto" href="Profile">Profile</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#book-a-table" class="book-a-table-btn scrollto">Profile</a>
+      <a href="{{url('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="book-a-table-btn scrollto" href="{{url('logout')}}">Logout</a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+      </form>
 
     </div>
   </header>
