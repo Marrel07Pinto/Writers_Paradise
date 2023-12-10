@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder
           \App\Models\Order::factory(3)
          ->has(\App\Models\Book::factory()->count(3))
          ->create();
-         $this->call(PostTableSeeder::class);
+         \App\Models\Post::factory(5)
+         ->has(\App\Models\Comment::factory()->count(3))
+         ->create();
     }
 }
