@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('Home');
 });
+Route::get('/Profile', function () {
+    return view('Profile');
+});
 
 Route::get('/Ebooks', [EbooksController::class, 'index']);
 
