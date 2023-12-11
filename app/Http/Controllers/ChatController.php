@@ -15,7 +15,14 @@ class ChatController extends Controller
         $posts = Post::all(); 
         return view('Chat', ['posts' => $posts]);
     }
+    public function comments($id)
+{
+    // Retrieve the post information based on the post ID
+    $post = Post::find($id);
 
+    // Pass the post information to the comments view
+    return view('Comments', ['post' => $post]);
+}
     /**
      * Show the form for creating a new resource.
      */
