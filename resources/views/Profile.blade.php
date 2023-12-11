@@ -80,8 +80,8 @@
 
  <!-- ======= Menu Section ======= -->
  
-      <div class="container">
-      <section id="testimonials" class="testimonials">
+<div class="container">
+    <section id="testimonials" class="testimonials">
       <div class="container position-relative">
             <div class="testimonial-item">
                 <img src="assets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -91,19 +91,53 @@
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
+                <button class="EditButton">&#x270F;</button>
+                <button class="deleteButton">&#x274C;</button>
+                <hr>
               </div>
             </div><!-- End testimonial item -->
       </div>
-    </section><!-- End Menu Section -->
+   </section>
+</div>
 
 
 
-   
+<section id="chefs" class="chefs">
+      <div class="container">
 
-   
-  
-           
-  </main><!-- End #main -->
+      
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="assets/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <div class="social">
+                <button class="EditButton">&#x270F;</button>
+                <button class="deleteButton">&#x274C;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="assets/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <div class="social">
+                <button class="EditButton">&#x270F;</button>
+                <button class="deleteButton">&#x274C;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
