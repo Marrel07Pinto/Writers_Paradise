@@ -23,13 +23,17 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('Home');
 });
+
 Route::get('/Ebooks', [EbooksController::class, 'index']);
 
 Route::get('/Chat', [ChatController::class, 'index']);
 Route::post('/Chat', [ChatController::class, 'store'])->name('Chat.store');
-Route::get('/Comments', function () {
-    return view('Comments');
-});
+Route::get('/comments/{id}', [ChatController::class, 'comments'])->name('Chat.comments');
+
+
+
+
+
 
 
 

@@ -38,55 +38,18 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
- 
-
-  <!-- ======= Header ======= -->
-  <section id="dashboardbackground">
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <div class="logo me-auto">
-        <h1><a href="index.html">Writers Paradise</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="Home">Home</a></li>
-          <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
-          <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
-          <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
-          <li><a class="nav-link scrollto" href="Profile">Profile</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="{{url('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="book-a-table-btn scrollto" href="{{url('logout')}}">Logout</a>
-      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-      </form>
-
-    </div>
-  </header>
-</section><!-- End Header -->
-
-
         <div class="section-title">
           <h2>Some photos from <span>Our Restaurant</span></h2>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
+        
         <section class="gallery_image" >
             <h2>Username</h2>
             <div class="grid-container">
                 <figure class="grid-item">
-                    <img src="assets/assets/img/chefs/chefs-2.jpg" alt="Image 1">
-                    <figcaption>Caption for Image 1</figcaption>
-                </figure>
-                
+                <img src="{{ asset('posts').'/'.$post->post_img }}" alt="">
+                    <figcaption><b>Caption:</b>{{ $post->p_Caption }}</figcaption>
+                </figure>   
             </div>
             <div class id="comments">
                  <h2>Comments</h2>
@@ -96,11 +59,10 @@
       <input type="text" class="comment-input" id="commentInput" placeholder="Add a comment...">
       <button type="button" class="comment-button" onclick="submitComment()">Submit</button>
     </form>
-  </section>
-        </section>
+  </section> 
+      
         
-       
-  </main><!-- End #main -->
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

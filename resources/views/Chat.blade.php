@@ -86,14 +86,16 @@
       <div class="container-fluid">
           <div class="col-lg-4">
             <div class="gallery-item">
+            
               <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
                 <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid">
                 <div class="comments">
                 <div class="col-lg-4">
-                <a class="nav-link scrollto" href="Comments"><b>Caption:</b>{{ $post->p_Caption }}</a>
+                <a class="nav-link scrollto" href="{{ route('Chat.comments', ['id' => $post->id]) }}">
+                 <b>Caption:</b>{{ $post->p_Caption }}
+                 </a>
                 </div>
-                </div>
-              </a>
+              </a> 
             </div>
           </div>
 </section>
@@ -106,8 +108,9 @@
                             <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid" >
                             <div class="comments">
                               <div class="col-lg-4">
-                                <a class="nav-link scrollto" href="Comments"><b>Caption:</b>{{ $post->p_Caption }}</a>
-                              </div>
+                              <a class="nav-link scrollto" href="{{ route('Chat.comments', ['id' => $post->id]) }}">
+                             <b>Caption:</b>{{ $post->p_Caption }}  
+                            </div>
                             </div>
                         </a>
                     </div>
