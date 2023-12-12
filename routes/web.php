@@ -27,9 +27,10 @@ Route::get('/Home', function () {
 Route::get('/Form', function () {
     return view('Form');
 });
-Route::get('/Profile', function () {
-    return view('Profile');
+Route::get('/Wprofile', function () {
+    return view('Wprofile');
 });
+
 Route::get('/show-form', [WriterController::class, 'showForm'])->name('writer.show-form');
 Route::post('/submit-form', [WriterController::class, 'submitForm'])->name('writer.submit-form');
 
@@ -41,6 +42,8 @@ Route::get('/comments/{id}', [ChatController::class, 'comments'])->name('Chat.co
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [WriterController::class, 'index'])->name('profile.index');
+
+   
 });
 
 
