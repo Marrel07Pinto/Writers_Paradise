@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 use App\Models\Writer;
 
 class WprofileController extends Controller
@@ -12,8 +14,16 @@ class WprofileController extends Controller
      */
     public function index()
     {
-        $pimgs = Writer::all(); 
+        $user_current = Auth::user();
+        $pimgs = Writer::where('user_id',$user_current->id)->get();
         return view('Wprofile', ['pimgs' => $pimgs]);
+    }
+
+    public function show_user_posts()
+    {
+        $user_current = Auth::user();
+        $posts = Post::where('writer_id', $user_current->writer->user_id)->get();
+        return view('Mpost', ['posts' => $posts]);
     }
 
     /**
