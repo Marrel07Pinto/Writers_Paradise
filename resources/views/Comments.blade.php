@@ -44,7 +44,7 @@
         </div>
         
         <section class="gallery_image" >
-            <h2>Username</h2>
+            <h><b>Writer:</b> {{$post->writer->w_firstname}}</h>
             <div class="grid-container">
                 <figure class="grid-item">
                 <img src="{{ asset('posts').'/'.$post->post_img }}" alt="">
