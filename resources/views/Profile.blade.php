@@ -59,7 +59,7 @@
           <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
           <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
           <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
-          <li><a class="nav-link scrollto" href="#">Profile</a></li>
+          <li><a class="nav-link scrollto" href="Profile">Profile</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
