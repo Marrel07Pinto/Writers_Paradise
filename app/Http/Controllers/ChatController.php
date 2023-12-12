@@ -93,6 +93,7 @@ class ChatController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Post::where('id',$id)->delete();
+        return Redirect('/mpost')->with('status', 'post-deleted');
     }
 }

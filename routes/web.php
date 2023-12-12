@@ -19,6 +19,11 @@ use App\Http\Controllers\WprofileController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::put('/submit-updatepost-form/{id}', [ProfileController::class, 'save_update_form']);
+Route::get('/delete-post/{id}', [ChatController::class, 'destroy']);
+
+
 Route::put('/submit-form/{id}', [WriterController::class, 'submitForm'])->name('writer.submit-form');
 
 Route::get('/', function () {
@@ -35,7 +40,9 @@ Route::get('/Wprofile', function () {
 });
 
 Route::get('/Wprofile', [WprofileController::class, 'index']);
-Route::get('/mpost', [WprofileController::class, 'show_user_posts']);
+Route::get('/mpost', [WprofileController::class, 'show_user_posts'])->name('update-post');
+
+Route::get('/update-post/{id}', [ProfileController::class, 'update_post']);
 
 
 Route::get('/Form/showForm', [WriterController::class, 'showForm'])->name('writer.showform');

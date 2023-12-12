@@ -95,8 +95,8 @@
                         </a>
                          <div class="member-info">
                 <div class="social">
-                <button class="EditButton">&#x270F;</button>
-                <button class="deleteButton">&#x274C;</button>
+                <a href="{{url('/update-post'.'/'.$post->id)}}"><button class="EditButton">&#x270F;</button></a>
+                <a href="{{url('/delete-post'.'/'.$post->id)}}"><button class="deleteButton">&#x274C;</button></a>
                 </div>
               </div>
                     

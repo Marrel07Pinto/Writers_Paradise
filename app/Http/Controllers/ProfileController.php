@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Post;
 
 class ProfileController extends Controller
 {
@@ -19,6 +20,36 @@ class ProfileController extends Controller
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
+    }
+
+    public function update_post(Request $request, string $id)
+    {
+        $post = Post::find($id);
+        return view('UpdatePost', ['post' => $post]);
+    }
+
+    public function save_update_form(Request $request, string $id)
+    {
+        $user_current = Auth::user();
+
+        if ($request->hasFile('p_image')) 
+        {
+            $image = $request->file('p_image');
+            $reImage = time().'.'.$image->getClientOriginalExtension();
+            $dest = public_path('/posts');
+            $image->move($dest, $reImage);
+        }
+
+        $imgPost = Post::find($id);
+        $imgPost->writer_id = $user_current->id;
+        $imgPost->post_img = $reImage ?? $imgPost->post_img;
+        $imgPost->p_Caption = $request->p_Caption;
+        $imgPost->save();
+
+
+        return Redirect::route('update-post')->with('status', 'post-updated');
+
+        
     }
 
     /**
@@ -37,6 +68,8 @@ class ProfileController extends Controller
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
+
+    
     /**
      * Delete the user's account.
      */

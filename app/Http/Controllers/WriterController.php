@@ -30,14 +30,7 @@ class WriterController extends Controller
 
     public function submitForm(Request $request, string $id)
     {
-        $request->validate([
-            'w_firstname' => 'required',
-            'w_lastname' => 'nullable',
-            'w_phone' => 'required',
-            'w_address' => 'required',
-            'w_postcode' => 'required',
-            'w_img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+       
         if ($request->hasFile('w_img')) 
         {
             $image = $request->file('w_img');
