@@ -23,7 +23,6 @@ class WriterFactory extends Factory
         return [
             'user_id'=>User::factory(),
             'w_firstname' => $this->faker-> name(),
-            'w_lastname' => $this->faker-> name(),
             'w_phone' => $this->faker->phoneNumber(),
             'w_address' =>$this->faker ->address(),
             'w_postcode' =>$this->faker->postcode(),
