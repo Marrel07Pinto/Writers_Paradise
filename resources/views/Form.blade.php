@@ -29,12 +29,11 @@
   ======================================================== -->
 </head>
 
-<div class="formcontainer">
+<form action="{{ route('writer.submit-form') }}" method="post" enctype="multipart/form-data">
+    @csrf
+    <div class="formcontainer">
  <label for="fname"><b>First Name</b></label>
  <input type="text" placeholder="Enter First Name" name="w_firstname" required>
-
- <label for="lname"><b>Last Name</b></label>
- <input type="text" placeholder="Enter Last Name" name="w_lastname" >
 
  <label for="phone"><b>Phone</b></label>
  <input type="tel" placeholder="Enter Phone Number" name="w_phone" required>
