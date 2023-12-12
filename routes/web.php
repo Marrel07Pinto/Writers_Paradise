@@ -30,6 +30,8 @@ Route::get('/Form', function () {
 Route::get('/Profile', function () {
     return view('Profile');
 });
+Route::get('/show-form', [WriterController::class, 'showForm'])->name('writer.show-form');
+Route::post('/submit-form', [WriterController::class, 'submitForm'])->name('writer.submit-form');
 
 Route::get('/Ebooks', [EbooksController::class, 'index']);
 
