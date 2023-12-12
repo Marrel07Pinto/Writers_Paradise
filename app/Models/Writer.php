@@ -25,4 +25,14 @@ class Writer extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+    protected $fillable = [
+        'user_id',
+        'w_firstname',
+        'w_lastname',
+        'w_phone',
+        'w_address',
+        'w_postcode',
+        'w_img',
+        
+    ];
 }
