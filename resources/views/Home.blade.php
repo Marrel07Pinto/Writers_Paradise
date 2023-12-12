@@ -60,6 +60,7 @@
           <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
           <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
           <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
+          <li><a class="nav-link scrollto" href="mpost">Manage post</a></li>
           <li><a class="nav-link scrollto" href="Wprofile">Profile</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>

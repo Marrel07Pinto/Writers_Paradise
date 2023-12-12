@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 
 class ChatController extends Controller
@@ -15,6 +16,8 @@ class ChatController extends Controller
         $posts = Post::all(); 
         return view('Chat', ['posts' => $posts]);
     }
+
+    
     public function comments($id)
 {
     // Retrieve the post information based on the post ID
@@ -36,6 +39,8 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
+        $user_current = Auth::user();
+
         $request->validate([
             'p_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             
@@ -48,9 +53,8 @@ class ChatController extends Controller
             $dest = public_path('/posts');
             $image->move($dest, $reImage);
         }
-    
         $imgPost = new Post;
-        $imgPost->writer_id = 1;
+        $imgPost->writer_id = $user_current->id;
         $imgPost->post_img = $reImage;
         $imgPost->p_Caption = $request->input('p_Caption'); 
         $imgPost->p_likes = 1;
