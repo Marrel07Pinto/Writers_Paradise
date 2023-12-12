@@ -18,6 +18,7 @@ use App\Http\Controllers\WprofileController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::put('/submit-form/{id}', [WriterController::class, 'submitForm'])->name('writer.submit-form');
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,8 +36,6 @@ Route::get('/Wprofile', function () {
 Route::get('/Wprofile', [WprofileController::class, 'index']);
 
 Route::get('/Form/showForm', [WriterController::class, 'showForm'])->name('writer.showform');
-Route::post('/submit-form', [WriterController::class, 'submitForm'])->name('writer.submit-form');
-
 Route::get('/Ebooks', [EbooksController::class, 'index']);
 
 Route::get('/Chat', [ChatController::class, 'index']);

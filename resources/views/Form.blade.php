@@ -19,36 +19,47 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/assets/css/style.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Delicious
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<form action="{{ route('writer.submit-form') }}" method="post" enctype="multipart/form-data">
+<body>
+  <div class=form-container>
+    <form method="post" action="{{url('/submit-form'.'/'.$userLogged->id)}}" enctype="multipart/form-data">
     @csrf
-    <div class="formcontainer">
- <label for="fname"><b>First Name</b></label>
- <input type="text" placeholder="Enter First Name" name="w_firstname" required>
-
- <label for="phone"><b>Phone</b></label>
- <input type="tel" placeholder="Enter Phone Number" name="w_phone" required>
-
- <label for="address"><b>Address</b></label>
- <input type="text" placeholder="Enter Address" name="w_address" required>
-
- <label for="postcode"><b>Postcode</b></label>
- <input type="text" placeholder="Enter Postcode" name="w_postcode" required>
-
- <label for="postcode"><b>Profile Picture</b></label>
- <input type="file" name="w_img" required>
-
- <input type="submit" value="Submit">
-</div>
-
+    @method('put')
+    <table class="table table-bordered">
+      <tr>
+        <th>First Name</th>
+        <td><input type="text" name="w_firstname" value="{{$userLogged->writer->w_firstname ?? $userLogged->writer->w_firstname}}"class="form-control" /></td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td><input type="text" name="w_phone" value="{{$userLogged->writer->w_phone ?? $userLogged->writer->w_phone}}"class="form-control" /></td>
+        </tr>
+      <tr>
+        <th>Address</th>
+        <td><input type="text" name="w_address" value="{{$userLogged->writer->w_address ?? $userLogged->writer->w_address}}" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th>Post Code</th>
+        <td><input type="text" name="w_postcode" value="{{$userLogged->writer->w_postcode ?? $userLogged->writer->w_postcode}}" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th>Photo</th>
+        <td>
+          @if($userLogged->writer->w_img)
+            <p class="my-2"><img width="80" src="{{asset('/profileimg')}}/{{$userLogged->writer->w_img}}" /></p>
+            <input type="hidden" value="{{$userLogged->writer->w_img }}" name="w_img" />
+          @endif
+          <input type="file" name="w_img" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+        <input type="submit" class="btn btn-primary" />
+        </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 </body>
 </html>

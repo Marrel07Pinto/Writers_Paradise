@@ -24,10 +24,11 @@ class WriterController extends Controller
 
     public function showForm()
     {
-        return view('Form');
+        $userLogged = Auth::User();
+        return view('Form',['userLogged' => $userLogged]);
     }
 
-    public function submitForm(Request $request)
+    public function submitForm(Request $request, string $id)
     {
         $request->validate([
             'w_firstname' => 'required',
@@ -44,16 +45,14 @@ class WriterController extends Controller
             $dest = public_path('/profileimg');
             $image->move($dest, $reImage);
         }
+        $writer = Writer::where('user_id', $id)->first();
 
-
-        Writer::create([
-            'w_firstname' => $request->input('w_firstname'),
-            'w_phone' => $request->input('w_phone'),
-            'w_address' => $request->input('w_address'),
-            'w_postcode' => $request->input('w_postcode'),
-            'w_img' =>  $reImage ,
-        ]);
-
+        $writer->w_phone = $request->input('w_phone');
+        $writer->w_address = $request->input('w_address');
+        $writer->w_postcode = $request->input('w_postcode');
+        $writer->w_img = $reImage;
+        $writer->save();
+        
         return redirect()->to('Wprofile')->with('success', 'Profile created successfully!');
 
     }
