@@ -21,6 +21,7 @@ class WriterTableSeeder extends Seeder
         $w->w_phone = '9987656345';
         $w->w_address ='Brigade0123';
         $w->w_postcode ='SA1 1QA';
+        $w->w_img ='1.jpg';
         $w->save();
         Writer::factory()->count(10)->create();
     }

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EbooksController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\WriterController;
 
 
 /*
@@ -23,6 +24,9 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('Home');
 });
+Route::get('/Form', function () {
+    return view('Form');
+});
 Route::get('/Profile', function () {
     return view('Profile');
 });
@@ -33,6 +37,9 @@ Route::get('/Chat', [ChatController::class, 'index']);
 Route::post('/Chat', [ChatController::class, 'store'])->name('Chat.store');
 Route::get('/comments/{id}', [ChatController::class, 'comments'])->name('Chat.comments');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [WriterController::class, 'index'])->name('profile.index');
+});
 
 
 

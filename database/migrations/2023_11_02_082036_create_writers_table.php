@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('w_phone')->nullable();
             $table->string('w_address');
             $table->string('w_postcode');
+            $table->string('w_img');
 
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')

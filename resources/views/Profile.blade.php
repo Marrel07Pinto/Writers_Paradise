@@ -80,24 +80,28 @@
 
  <!-- ======= Menu Section ======= -->
  
-<div class="container">
+ <div class="container">
     <section id="testimonials" class="testimonials">
-      <div class="container position-relative">
-            <div class="testimonial-item">
-                <img src="assets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <button class="EditButton">&#x270F;</button>
-                <button class="deleteButton">&#x274C;</button>
-                <hr>
-              </div>
-            </div><!-- End testimonial item -->
-      </div>
-   </section>
+        <div class="container position-relative">
+            @if(isset($writer))
+                <div class="testimonial-item">
+                    <img src="assets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                    <h3>{{ $writer->w_firstname }} {{ $writer->w_lastname }}</h3>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        <!-- Your quote content here -->
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <button class="EditButton">&#x270F;</button>
+                    <button class="deleteButton">&#x274C;</button>
+                    <hr>
+                </div>
+            @else
+                   <h>Complete your Profile<h>
+                    @include('Form')
+            @endif
+        </div>
+    </section>
 </div>
 
 

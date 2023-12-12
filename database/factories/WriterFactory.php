@@ -19,6 +19,7 @@ class WriterFactory extends Factory
     protected $model = Writer::class;
     public function definition(): array
     {
+        $fileName = $this->faker->word . '.' . $this->faker->fileExtension;
         return [
             'user_id'=>User::factory(),
             'w_firstname' => $this->faker-> name(),
@@ -26,6 +27,7 @@ class WriterFactory extends Factory
             'w_phone' => $this->faker->phoneNumber(),
             'w_address' =>$this->faker ->address(),
             'w_postcode' =>$this->faker->postcode(),
+            'w_img'=> $fileName,
 
         ];
     }
