@@ -59,6 +59,7 @@
           <li><a class="nav-link scrollto" href="Ebooks">E-Books</a></li>
           <li><a class="nav-link scrollto" href="Chat">Chat</a></li>
           <li><a class="nav-link scrollto" href="Cart">Cart</a></li>
+          <li><a class="nav-link scrollto" href="mpost">Manage post</a></li>
           <li><a class="nav-link scrollto" href="Wprofile">Profile</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
@@ -114,15 +115,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <div class="social">
-                <button class="EditButton">&#x270F;</button>
-                <button class="deleteButton">&#x274C;</button>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <div class="col-lg-4 col-md-6">
