@@ -8,6 +8,7 @@ use App\Http\Controllers\WriterController;
 use App\Http\Controllers\WprofileController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +35,8 @@ Route::get('/Wprofile', function () {
 });
 
 Route::get('/Wprofile', [WprofileController::class, 'index']);
+Route::get('/mpost', [WprofileController::class, 'show_user_posts']);
+
 
 Route::get('/Form/showForm', [WriterController::class, 'showForm'])->name('writer.showform');
 Route::get('/Ebooks', [EbooksController::class, 'index']);
@@ -41,6 +44,9 @@ Route::get('/Ebooks', [EbooksController::class, 'index']);
 Route::get('/Chat', [ChatController::class, 'index']);
 Route::post('/Chat', [ChatController::class, 'store'])->name('Chat.store');
 Route::get('/comments/{id}', [ChatController::class, 'comments'])->name('Chat.comments');
+
+Route::get('/showuserposts', [ProfileController::class, 'show_user_posts']);
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [WriterController::class, 'index'])->name('profile.index');
