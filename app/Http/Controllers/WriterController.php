@@ -55,7 +55,8 @@ class WriterController extends Controller
             'w_img' =>  $reImage ,
         ]);
 
-        return redirect()->back()->with('success', 'Profile created successfully!');
+        return redirect()->to('Wprofile')->with('success', 'Profile created successfully!');
+
     }
     /**
      * Show the form for creating a new resource.
@@ -93,6 +94,10 @@ class WriterController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function show()
+    {
+       
     }
     
 }
