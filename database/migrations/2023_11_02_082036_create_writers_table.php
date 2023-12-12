@@ -16,9 +16,9 @@ return new class extends Migration
             $table->biginteger('user_id')->unsigned();
             $table->string('w_firstname')->nullable();
             $table->string('w_phone')->nullable();
-            $table->string('w_address');
-            $table->string('w_postcode');
-            $table->string('w_img');
+            $table->string('w_address')->nullable();
+            $table->string('w_postcode')->nullable();
+            $table->string('w_img')->nullable();
 
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')

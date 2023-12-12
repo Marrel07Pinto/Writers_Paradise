@@ -79,30 +79,30 @@
   </section><!-- End Hero -->
 
  <!-- ======= Menu Section ======= -->
- 
- <div class="container">
-    <section id="testimonials" class="testimonials">
-        <div class="container position-relative">
-            @if(isset($writer))
+ @foreach($pimgs as $pimg)
+    <div class="container">
+        <section id="testimonials" class="testimonials">
+            <div class="container position-relative">
                 <div class="testimonial-item">
-                    <img src="assets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                    <h3>{{ $writer->w_firstname }}</h3>
+                    <img src="{{ asset('profileimg').'/'.$pimg->w_img }}" class="testimonial-img" alt="">
+                    <h3>{{ $pimg->w_firstname }}</h3>
+                    <h3>{{ $pimg->w_address }}</h3>
+                    <h3>{{ $pimg->w_postcode }}</h3>
+
                     <p>
                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                         <!-- Your quote content here -->
                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
-                    <button class="EditButton">&#x270F;</button>
-                    <button class="deleteButton">&#x274C;</button>
+                    <a href="{{ route('writer.showform') }}"><button class="deleteButton">Complete your profile</button></a>
+                    <a href="{{ route('Form.edit') }}"><button class="EditButton">&#x270F;</button></a>
+
                     <hr>
                 </div>
-            @else
-                   <h>Complete your Profile<h>
-                    @include('Form')
-            @endif
-        </div>
-    </section>
-</div>
+            </div>
+        </section>
+    </div>
+@endforeach
 
 
 

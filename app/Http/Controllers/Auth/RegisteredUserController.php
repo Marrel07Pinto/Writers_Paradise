@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Writer;
 
 class RegisteredUserController extends Controller
 {
@@ -40,6 +41,10 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+        ]);
+        $writer = writer::create([
+            'user_id' => $user->id,
+            'w_firstname'=>$user->name,
         ]);
 
         event(new Registered($user));

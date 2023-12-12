@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EbooksController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\WriterController;
+use App\Http\Controllers\WprofileController;
 
 
 /*
@@ -31,7 +32,9 @@ Route::get('/Wprofile', function () {
     return view('Wprofile');
 });
 
-Route::get('/show-form', [WriterController::class, 'showForm'])->name('writer.show-form');
+Route::get('/Wprofile', [WprofileController::class, 'index']);
+
+Route::get('/Form/showForm', [WriterController::class, 'showForm'])->name('writer.showform');
 Route::post('/submit-form', [WriterController::class, 'submitForm'])->name('writer.submit-form');
 
 Route::get('/Ebooks', [EbooksController::class, 'index']);
@@ -45,7 +48,7 @@ Route::middleware(['auth'])->group(function () {
 
    
 });
-
+Route::get('/Form/edit', [writerController::class, 'edit'])->name('Form.edit');
 
 
 
