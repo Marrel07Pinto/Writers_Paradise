@@ -86,7 +86,7 @@
             @if(isset($writer))
                 <div class="testimonial-item">
                     <img src="assets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                    <h3>{{ $writer->w_firstname }} {{ $writer->w_lastname }}</h3>
+                    <h3>{{ $writer->w_firstname }}</h3>
                     <p>
                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                         <!-- Your quote content here -->

@@ -17,7 +17,6 @@ class WriterTableSeeder extends Seeder
         $w = new Writer;
         $w->user_id='1';
         $w->w_firstname = 'Keith';
-        $w->w_lastname = 'Pinto';
         $w->w_phone = '9987656345';
         $w->w_address ='Brigade0123';
         $w->w_postcode ='SA1 1QA';
