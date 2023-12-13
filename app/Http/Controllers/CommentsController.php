@@ -77,7 +77,7 @@ class CommentsController extends Controller
     $comment->writer_id = $user_current->id;
     $comment->c_messages = $request->comment;
     $comment->save();
-    return redirect('Comments/'.$slug.'/'.$id)->with('success', 'Comment has been submitted');
+    return redirect('comments'.'/'.$id)->with('success', 'Comment has been submitted');
    
 
     }

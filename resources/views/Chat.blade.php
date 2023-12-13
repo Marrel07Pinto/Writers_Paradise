@@ -84,16 +84,18 @@
  @foreach($posts as $post)
  @if($post->id % 2 != 0)
 <section id="gallery" class="gallery">
-      <div class="container-fluid">
+      <div class="container-fluid"> 
           <div class="col-lg-4">
             <div class="gallery-item">
-            
+            <a class="nav-link scrollto" href="{{ url('/user-posts/'.$post->writer_id) }}">
+            <p> <b>Writer:</b>{{ $post->Writer->w_firstname}}</p>
               <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
                 <img src="{{ asset('posts').'/'.$post->post_img }}" alt="" class="img-fluid">
                 <div class="comments">
                 
                 <a class="nav-link scrollto" href="{{ route('Chat.comments', ['id' => $post->id]) }}">
                 <p> <b>Caption:</b>{{ $post->p_Caption }}</p>
+                
                  </a>
                
               </a> 
@@ -103,6 +105,8 @@
 @else
 <section id="gallery2" class="gallery2">
             <div class="container-fluid2">
+            <a class="nav-link scrollto" href="{{ url('/user-posts/'.$post->writer_id) }}">
+            <p> <b>Writer:</b>{{ $post->Writer->w_firstname}}</p> 
                 <div class="col-lg-4">
                     <div class="gallery-item2">
                         <a href="{{ asset('posts').'/'.$post->post_img }}" class="gallery-lightbox">
@@ -110,7 +114,8 @@
                             <div class="comments">
                               
                               <a class="nav-link scrollto" href="{{ route('Chat.comments', ['id' => $post->id]) }}">
-                             <b>Caption:</b>{{ $post->p_Caption }}  
+                             <b>Caption:</b>{{ $post->p_Caption }} 
+                             
                            
                             </div>
                         </a>
@@ -120,6 +125,16 @@
 </section>
 @endif
 @endforeach
+
+<div class="container mt-2">
+@if ($errors->any())
+    @foreach($errors->all() as $error)
+      <div class="alert alert-danger" role="alert">
+        {{$error}}
+      </div>
+    @endforeach
+@endif
+</div>
 
 {{$posts->links()}}
 <section id="contact" class="contact">

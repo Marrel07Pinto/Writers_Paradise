@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Writer;
 
 class ChatController extends Controller
@@ -28,6 +29,11 @@ class ChatController extends Controller
     // Pass the post information to the comments view
     return view('Comments', ['post' => $post]);
 }
+    public function user_posts (Request $request,string $id)
+    {
+        $posts=Post::where('writer_id',$id)->get();
+        return view('Displaypost',['posts'=>$posts]);
+    }
     /**
      * Show the form for creating a new resource.
      */
