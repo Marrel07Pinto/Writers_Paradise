@@ -7,6 +7,7 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\WprofileController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\EmailController;
 
 
 
@@ -71,8 +72,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
 
 
 require __DIR__.'/auth.php';
