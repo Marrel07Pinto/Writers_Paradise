@@ -50,8 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [WriterController::class, 'index'])->name('profile.index');  
 });
 Route::post('save-comment/{slug}/{id}', [CommentsController::class, 'save_comment'])->name('save.comment');
-
-
+Route::put('update-comment/{id}', [CommentsController::class, 'update_comment'])->name('update.comment');
 
 
 

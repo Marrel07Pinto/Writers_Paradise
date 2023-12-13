@@ -81,4 +81,15 @@ class CommentsController extends Controller
    
 
     }
+    public function update_comment(Request $request, $id)
+{    
+    dd($request->all());
+    $comment = Comment::findOrFail($id);
+    $comment->c_messages = $request->input('edited_comment');
+    $comment->save();
+
+    // You can return a response if needed
+    return response()->json(['success' => true]);
+}
+    
 }

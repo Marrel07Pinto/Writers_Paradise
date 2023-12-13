@@ -25,6 +25,10 @@ class Writer extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+    public function Comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
     protected $fillable = [
         'user_id',
         'w_firstname',

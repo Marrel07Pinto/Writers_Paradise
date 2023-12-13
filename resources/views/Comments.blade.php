@@ -43,7 +43,7 @@
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
         
-        <section class="gallery_image" >
+<section class="gallery_image" >
             <h><b>Writer:</b> {{$post->writer->w_firstname}}</h>
             <div class="grid-container">
                 <figure class="grid-item">
@@ -53,22 +53,93 @@
             </div>
           
             <!-- --------save comment--------------------->
-            @auth
-    <div id="comments">
-        <h2>Comments</h2>
-        <!-- Display existing comments here -->
-    </div>
-    
-    <div class="comment-form" id="commentForm">
-        <h2 class="card-header">Add Comment</h2>
+            @if(Auth::check())
+<div id="comments">
+    <h2>Comments<span class="badge bg-dark">{{ count($post->comments) }}</span></h2>
+    @if($post->comments)
+        @foreach($post->comments as $comment)
+        <div class="blockquote">
+            <p class="mb-0">{{$comment->c_messages}}</p>
+            <p></p>
+            <footer class="blockquote-footer">{{$comment->writer->w_firstname}}<br></footer>
+
+            @if(Auth::id() == $comment->writer->user_id)
+            <p class="mb-0">
+                <a href="#" class="btn btn-success edit-comment-btn" data-comment-id="{{$comment->id}}">Edit</a>
+            </p>
+            <form class="edit-comment-form d-none" id="editCommentForm-{{ $comment->id }}" data-comment-id="{{ $comment->id }}">
+                @csrf
+                @method('PUT')
+                <p></p>
+                <textarea name="edited_comment" style="background-color: white; color: black" class="btn btn-success form-control">{{$comment->c_messages}}</textarea>
+                <p></p>
+                <button type="submit" class="btn btn-success mt-2">Update</button>
+            </form>
+            @endif
+        </div>
+        <hr>
+        @endforeach
+    @endif
+</div>
+<div class="comment-form" id="commentForm">
+        <h class="card-header">Add Comment</h>
         <form method="post" action="{{ route('save.comment', ['slug' => Str::slug($post->p_Caption), 'id' => $post->id]) }}">
             @csrf
             <input type="text" name="comment" class="comment-input" id="commentInput" placeholder="Add a comment...">
             <button type="submit" class="comment-button">Submit</button>
         </form>
-    </div>
-@endauth
-  </section> 
+      </div>
+      @endauth
+</section> 
+
+<!-- Your existing form for adding comments -->
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Attach event listeners to all edit-comment forms
+    // document.querySelectorAll('.edit-comment-form').forEach(function (form) {
+    //     form.addEventListener('submit', function (event) {
+    //         event.preventDefault();
+            document.querySelectorAll('.edit-comment-form').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        console.log('Update form submitted');
+
+            // Get the form data
+            const formData = new FormData(this);
+
+            // Use Axios for the AJAX request
+            console.log("URL:", "{{ route('update.comment', ['id' => '__COMMENT_ID__']) }}".replace('__COMMENT_ID__', this.getAttribute('data-comment-id')));
+            axios.put("{{ route('update.comment', ['id' => '__COMMENT_ID__']) }}".replace('__COMMENT_ID__', this.getAttribute('data-comment-id')), formData)
+                .then(response => {
+                    // Handle success (if needed)
+                    console.log(response.data);
+                    // Reload the page or update the comment section as needed
+                    location.reload();
+                })
+                .catch(error => {
+                    // Handle error (if needed)
+                    console.error(error);
+                });
+        });
+    });
+
+    // Show/hide edit-comment forms based on button click
+    document.querySelectorAll('.edit-comment-btn').forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Get the associated form ID
+            var formId = 'editCommentForm-' + this.getAttribute('data-comment-id');
+            // Toggle the visibility of the form
+            document.getElementById(formId).classList.toggle('d-none');
+        });
+    });
+});
+</script>
+
+
+
+
 
 
 

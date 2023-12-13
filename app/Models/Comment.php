@@ -13,4 +13,8 @@ public function Post()
     {
         return $this->belongsTo(Post::class);
     }
+    public function Writer()
+    {
+        return $this->belongsTo(Writer::class);
+    }
 }

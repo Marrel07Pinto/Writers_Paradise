@@ -33,15 +33,15 @@
       </tr>
       <tr>
         <th>Phone</th>
-        <td><input type="text" name="w_phone" value="{{$userLogged->writer->w_phone ?? $userLogged->writer->w_phone}}"class="form-control" /></td>
+        <td><input type="text" name="w_phone" value="{{$userLogged->writer->w_phone ?? $userLogged->writer->w_phone}}"class="form-control"  pattern="^\+\d*" title="Please enter only numbers" required></td>
         </tr>
       <tr>
         <th>Address</th>
-        <td><input type="text" name="w_address" value="{{$userLogged->writer->w_address ?? $userLogged->writer->w_address}}" class="form-control" /></td>
+        <td><input type="text" name="w_address" value="{{$userLogged->writer->w_address ?? $userLogged->writer->w_address}}" class="form-control" required /></td>
       </tr>
       <tr>
         <th>Post Code</th>
-        <td><input type="text" name="w_postcode" value="{{$userLogged->writer->w_postcode ?? $userLogged->writer->w_postcode}}" class="form-control" /></td>
+        <td><input type="text" name="w_postcode" value="{{$userLogged->writer->w_postcode ?? $userLogged->writer->w_postcode}}" class="form-control" required/></td>
       </tr>
       <tr>
         <th>Photo</th>
