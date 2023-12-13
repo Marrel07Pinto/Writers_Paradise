@@ -55,6 +55,7 @@ Route::put('update-comment/{id}', [CommentsController::class, 'update_comment'])
 
 
 
+
 Route::get('/Form/edit', [writerController::class, 'edit'])->name('Form.edit');
 Route::get('/Cart', function () {
     return view('Cart');
