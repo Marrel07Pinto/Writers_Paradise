@@ -22,8 +22,13 @@ class WprofileController extends Controller
     public function show_user_posts()
     {
         $user_current = Auth::user();
-        $posts = Post::where('writer_id', $user_current->writer->user_id)->get();
-        return view('Mpost', ['posts' => $posts]);
+
+        if($user_current->name=="Admin")
+            $posts=Post::all();
+        else
+
+            $posts = Post::where('writer_id', $user_current->writer->user_id)->get();
+            return view('Mpost', ['posts' => $posts]);
     }
 
     /**

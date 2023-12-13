@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Comment;
+
 
 class CommentsController extends Controller
 {
@@ -11,7 +14,8 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::find($id); 
+        return view('Comments', ['posts' => $posts]);
     }
 
     /**
@@ -60,5 +64,21 @@ class CommentsController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function save_comment (Request $request, $slug, $id)
+    {
+        
+        $user_current = Auth::user();
+
+    $post = Post::where('id', $id)->first();
+    $comment = new Comment;
+    $comment->post_id = $post->id;
+    $comment->writer_id = $user_current->id;
+    $comment->c_messages = $request->comment;
+    $comment->save();
+    return redirect('Comments/'.$slug.'/'.$id)->with('success', 'Comment has been submitted');
+   
+
     }
 }

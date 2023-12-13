@@ -120,6 +120,8 @@
 </section>
 @endif
 @endforeach
+
+{{$posts->links()}}
 <section id="contact" class="contact">
 <form method="POST" action="{{ route('Chat.store') }}" enctype="multipart/form-data" class="">        
         @csrf

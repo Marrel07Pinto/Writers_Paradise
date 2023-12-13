@@ -13,7 +13,8 @@ class ChatController extends Controller
      */
     public function index()
     {
-        $posts = Post::all(); 
+        // $posts = Post::all(); 
+        $posts= Post::orderBy('id','desc')->simplePaginate(2);
         return view('Chat', ['posts' => $posts]);
     }
 

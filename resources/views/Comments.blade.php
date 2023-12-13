@@ -51,17 +51,25 @@
                     <figcaption><b>Caption:</b>{{ $post->p_Caption }}</figcaption>
                 </figure>   
             </div>
-            <div class id="comments">
-                 <h2>Comments</h2>
-                user1 : good its best
-          </div>
-          <form class="comment-form" id="commentForm">
-      <input type="text" class="comment-input" id="commentInput" placeholder="Add a comment...">
-      <button type="button" class="comment-button" onclick="submitComment()">Submit</button>
-    </form>
+          
+            <!-- --------save comment--------------------->
+            @auth
+    <div id="comments">
+        <h2>Comments</h2>
+        <!-- Display existing comments here -->
+    </div>
+    
+    <div class="comment-form" id="commentForm">
+        <h2 class="card-header">Add Comment</h2>
+        <form method="post" action="{{ route('save.comment', ['slug' => Str::slug($post->p_Caption), 'id' => $post->id]) }}">
+            @csrf
+            <input type="text" name="comment" class="comment-input" id="commentInput" placeholder="Add a comment...">
+            <button type="submit" class="comment-button">Submit</button>
+        </form>
+    </div>
+@endauth
   </section> 
-      
-        
+
 
 
   <!-- ======= Footer ======= -->
