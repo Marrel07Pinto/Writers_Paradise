@@ -85,27 +85,27 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(assets/assets/img/slide/slide-1.jpg);">
+          <div class="carousel-item active" style="background-image: url(assets/assets/img/slide/a.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Writers</span> Paradise</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animate__animated animate__fadeInUp">Books hold a timeless allure, serving as portals to different worlds, minds, and eras. As vessels of knowledge and imagination, they weave intricate tapestries of stories, ideas, and perspectives.</p>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(assets/assets/img/slide/slide-2.jpg);">
+          <div class="carousel-item" style="background-image: url(assets/assets/img/slide/b.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Books</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>               
+                <p class="animate__animated animate__fadeInUp">Beyond their entertainment value, books serve as repositories of knowledge, preserving the collective wisdom of humanity. They document history, articulate scientific principles, and delve into the intricacies of philosophy and culture. </p>               
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url(assets/assets/img/slide/slide-3.jpg);">
+          <div class="carousel-item" style="background-image: url(assets/assets/img/slide/c.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -141,8 +141,8 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Delicious</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+    <h3>Book</h3>
+    <p>“I look at books as being a form of activism. Sometimes they’ll show us a side of the world that we might not have known about.”— Angie Thomas </p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

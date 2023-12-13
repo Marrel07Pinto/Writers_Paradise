@@ -77,8 +77,8 @@
 
 
         <div class="section-title">
-          <h2>Some photos from <span>Our Restaurant</span></h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Manage Your<span> Post</span></h2>
+          <p></p>
         </div>
         @foreach($posts as $post)
                 <section id="gallery" class="gallery">
@@ -109,8 +109,8 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Delicious</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+    <h3>Book</h3>
+    <p>“I look at books as being a form of activism. Sometimes they’ll show us a side of the world that we might not have known about.”— Angie Thomas </p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
