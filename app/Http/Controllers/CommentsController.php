@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\Writer;
+use App\Mail\NotificationMail;
+use Illuminate\Support\Facades\Mail;
 
 
 class CommentsController extends Controller
@@ -77,6 +80,10 @@ class CommentsController extends Controller
     $comment->writer_id = $user_current->id;
     $comment->c_messages = $request->comment;
     $comment->save();
+
+    $email = Post::find($id)->writer->user->email;
+    Mail::to($email)->send(new NotificationMail());
+
     return redirect('comments'.'/'.$id)->with('success', 'Comment has been submitted');
    
 
