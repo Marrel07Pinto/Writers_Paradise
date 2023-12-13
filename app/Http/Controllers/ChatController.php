@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use App\Models\Writer;
 
 class ChatController extends Controller
 {
@@ -44,6 +45,7 @@ class ChatController extends Controller
 
         $request->validate([
             'p_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'Post Caption'=> 'required|String',
             
         ]);
     
@@ -63,6 +65,7 @@ class ChatController extends Controller
     
         return redirect('/Chat')->with('success', 'Data has been added');
      }
+     
     
 
     /**
