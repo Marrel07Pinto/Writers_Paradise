@@ -51,7 +51,7 @@ class ChatController extends Controller
 
         $request->validate([
             'p_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'Post Caption'=> 'required|String',
+            'p_Caption'=> 'required|String',
             
         ]);
     
