@@ -1,7 +1,7 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}"  style="background-image: url('assets/assets/img/chefs/registerB.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         @csrf
-
+        <b><h4 style="text-align: center; color: #333; font-size: 24px; margin-bottom: 20px;">Register</h4><b>
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('First Name')" />

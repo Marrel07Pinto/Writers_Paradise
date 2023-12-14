@@ -118,16 +118,7 @@
 
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <div class="social">
-                <button class="EditButton">&#x270F;</button>
-                <button class="deleteButton">&#x274C;</button>
-                </div>
-              </div>
-            </div>
+         
           </div>
 
         </div>

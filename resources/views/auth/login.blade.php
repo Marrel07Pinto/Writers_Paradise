@@ -1,10 +1,10 @@
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-auth-session-status class="mb-4" :status="session('status')"/>
 
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login') }}" style="background-image: url('assets/assets/img/chefs/Form.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" >
         @csrf
-
+        <h4 style="text-align: center; color: #333; font-size: 24px; margin-bottom: 20px;">Login</h4>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
